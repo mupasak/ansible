@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-06-19T12:32:27.018Z" agent="5.0 (Windows)" etag="Mw7TLGrUKZKV8z5h3IZe" version="13.2.6" type="github">
+<mxfile host="app.diagrams.net" modified="2020-06-19T12:37:42.099Z" agent="5.0 (Windows)" etag="D6Y8C9nua_CMhexIj1Qm" version="13.2.6" type="github">
   <diagram id="KGuRnCBPqNZkWZdnxVRj" name="Page-1">
-    <mxGraphModel dx="782" dy="404" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1632" dy="404" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,14 +13,11 @@
         <mxCell id="nJfd-ZtKPq7GGZHj6Cou-7" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=90;" parent="1" vertex="1">
           <mxGeometry x="580" y="200" width="50" height="196" as="geometry" />
         </mxCell>
-        <mxCell id="K1HABIInFFHajfVLy6Dy-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nJfd-ZtKPq7GGZHj6Cou-9" target="nJfd-ZtKPq7GGZHj6Cou-13">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="nJfd-ZtKPq7GGZHj6Cou-9" value="&lt;div&gt;UspcDaemon&lt;/div&gt;&lt;div&gt;(run_master)&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="30" y="130" width="127.5" height="40" as="geometry" />
+        <mxCell id="nJfd-ZtKPq7GGZHj6Cou-9" value="&lt;div&gt;UspcDaemon&lt;/div&gt;&lt;div&gt;(run_master)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="130" width="190" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nJfd-ZtKPq7GGZHj6Cou-13" value="&lt;div&gt;Start Staging Server&lt;/div&gt;&lt;div&gt;(Starts Flask server and configure all the related url)&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="16.879999999999995" y="220" width="153.75" height="70" as="geometry" />
+          <mxGeometry x="-10" y="220" width="153.75" height="70" as="geometry" />
         </mxCell>
         <mxCell id="nJfd-ZtKPq7GGZHj6Cou-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="nJfd-ZtKPq7GGZHj6Cou-16" target="nJfd-ZtKPq7GGZHj6Cou-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -31,11 +28,17 @@
         <mxCell id="nJfd-ZtKPq7GGZHj6Cou-18" value="&lt;div&gt;Starts uspc worker thread with multiprocessing queue&lt;/div&gt;&lt;div&gt;sent by avf-worker&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="550" y="208" width="150" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="K1HABIInFFHajfVLy6Dy-1" value="&lt;div&gt;Starts FaultManagement queus&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;(Internally starts &lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="K1HABIInFFHajfVLy6Dy-1" value="&lt;div&gt;Starts FaultManagement queus&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;(Internally starts fault monitoring &lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="370" y="320" width="180" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="K1HABIInFFHajfVLy6Dy-3" value="&lt;div&gt;Starts HeartBeat queue&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="680" y="320" width="120" height="60" as="geometry" />
+        <mxCell id="K1HABIInFFHajfVLy6Dy-3" value="&lt;div&gt;Starts HeartBeat queue&lt;/div&gt;: Vnf-monitoring, health-check, recovery" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="320" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="K1HABIInFFHajfVLy6Dy-5" value="&lt;br&gt;init method: Initalizes the confd, set rpcs, start worker thread&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="225" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="K1HABIInFFHajfVLy6Dy-6" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="50" height="196" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
